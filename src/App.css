@@ -1,0 +1,266 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  padding: 0 20px;
+}
+
+.navbar{
+  display: flex;
+  padding: 20px 15px;
+  align-items: center;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.navbar img{
+  margin-right: 20px;
+  height: 30px;
+  mix-blend-mode: darken;
+  cursor: pointer;
+}
+
+.navbar .arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar div{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navbar div span{
+  font-size: 19px;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  color: #868b8f;
+}
+
+.navbar div span.bread{
+  color:  #e2e3e3;
+  margin: 0 1px;
+}
+
+.navbar div span.activeBread{
+  color: #000;
+}
+
+.root_folder{
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 16vw 16vw 16vw 16vw 16vw 16vw;
+  align-items: flex-end;
+}
+
+.folder, .file, .new_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 15px 4.5vw;
+  width: 110px;
+  height: 120px;
+  padding: 1px;
+}
+
+.folder .folder_name, .file .file_name{
+  margin-top: 10px;
+  color: #595f66;
+  cursor: pointer;
+  font-weight: 500;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.folder_name_options, .file_name_options{
+  background-color: #e6f5ff;
+  border-radius: 5px;
+}
+
+.options {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 18px #f8f8f8a4;
+  display: flex;
+  flex-direction: column;
+  left: 100px;
+  top: 75px;
+  margin-top: -77px;
+}
+
+.options div{
+  padding: 10px 60px 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #545b62;
+  font-weight: 500;
+}
+
+.options .rename{
+  background-color: #eeeff1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.options .delete{
+  color: #ff5942;
+  margin-top: -5px;
+}
+
+.new_item img{
+  cursor: pointer;
+}
+
+.folder img{
+  cursor: pointer;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.file img{
+  height: 80px;
+  margin-bottom: -35px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.file .syntax{
+  position: relative;
+  top: 5px;
+  background-color: #cf3917e4;
+  padding: 3px 6px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.add_item{
+  position: absolute;
+  width: 98vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 999;
+}
+
+.add_item .add_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e8e9ec;
+  padding: 50px;
+  box-shadow: 0 0 20px 60px #f8f8f8;
+  border-radius: 10px;
+}
+
+.add_item .add_box img {
+  height: 15px;
+  left: 130px;
+  bottom: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.add_item .add_box .add_title{
+  margin-top: -30px;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.add_item .add_box .switch{
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.add_item .add_box .switch button{
+  padding: 5px;
+  border-radius: 0px;
+  border: 0px;
+  transition: 0.1s;
+  font-size: 12px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 3px solid #f3f3f3;
+}
+
+.add_item .add_box .switch button.file_btn{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 0px;
+}
+
+.add_item .add_box .switch button.folder_btn{
+  border-end-end-radius: 10px;
+  border-top-right-radius: 10px;
+  border-left: 0px;
+}
+
+.add_item .add_box .switch .active{
+  background-color: #4ab7ff;
+  color: #fff;
+}
+
+.add_item .add_box input{
+  width: 220px;
+  height: 35px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #969595;
+}
+
+.add_item .add_box input.input_error{
+  border: 1px solid #ff6739;
+}
+
+.add_item .add_box .error{
+  font-size: 12px;
+  color: #ff6739;
+  width: 215px;
+  text-align: left;
+}
+
+.add_item .add_box .create{
+  margin-top: 20px;
+  width: 220px;
+  height: 35px;
+  background-color: #4ab7ff;
+  color: #fff;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: -10px;
+}
